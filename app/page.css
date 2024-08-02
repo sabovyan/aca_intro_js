@@ -1,0 +1,83 @@
+:root {
+  --header-font-size: 1.5rem;
+  --description-font-size: 1.2rem;
+  --code-font-size: 0.65rem;
+}
+/* .scroller { */
+/*   scroll-snap-type: x mandatory; */
+/*   scroll-behavior: smooth; */
+/*   display: flex; */
+/*   overflow-x: scroll; */
+/* } */
+/**/
+/* .scroller section { */
+/*   --padding: 2em; */
+/**/
+/*   scroll-snap-align: start; */
+/*   scroll-snap-stop: always; */
+/**/
+/*   min-width: 100vw; */
+/*   height: 100vh; */
+/*   max-height: calc(100vh - var(--padding)); */
+/*   position: relative; */
+/*   padding: var(--padding); */
+/* } */
+/**/
+/* .content { */
+/*   font-family: inherit; */
+/*   font-size: 2em; */
+/* } */
+
+/* @media screen and (max-width: 1200px) { */
+.scroller {
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+  /* scroll-snap-type: y mandatory; */
+  height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  --padding: 1em;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  min-width: fit-content;
+  height: 100vh;
+  max-height: calc(100vh - var(--padding));
+  position: relative;
+  padding: var(--padding);
+}
+
+.header {
+  font-size: var(--header-font-size, 1rem);
+
+  font-weight: bold;
+  margin-block-end: 3rem;
+}
+
+.body {
+  /* font-size: clamp(1rem, 5vw, 3rem); */
+  font-size: var(--description-font-size, 1rem);
+
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-rows: minmax(100px, 1fr); */
+  /* grid-template-columns: 1fr; */
+  /* gap: 1rem; */
+}
+
+.code {
+  /* font-size: clamp(1rem, 5vw, 3rem); */
+  padding: 2rem;
+  font-size: var(--code-font-size, 12px);
+}
+
+.description {
+  width: 100%;
+}
+/* } */
