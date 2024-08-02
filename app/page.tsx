@@ -155,6 +155,7 @@ export default function Home() {
 
                 {slide.content.image && (
                   <Image
+                    loading="eager"
                     src={slide.content.image}
                     alt={`${slide.title} image`}
                     width="500"
