@@ -80,7 +80,7 @@ const slides = [
       description:
         "You can select DOM elements using methods like getElementById, getElementsByClassName, getElementsByTagName, querySelector, and querySelectorAll.",
       codeSnippet:
-        "const element = \n\tdocument.getElementById('myElement');\nconst elements = \n\tdocument.querySelectorAll('.myClass');",
+        "const element = document.getElementById('myElement');\nconst elements = document.querySelectorAll('.myClass');",
       image: "",
     },
   },
@@ -90,7 +90,7 @@ const slides = [
       description:
         "Once selected, you can manipulate DOM elements by changing their content, style, and attributes.",
       codeSnippet:
-        "element.textContent = 'New Content';\nelement.style.color = 'red';\nelement\n\t.setAttribute('data-custom', 'value');",
+        "element.textContent = 'New Content';\nelement.style.color = 'red';\nelement.setAttribute('data-custom', 'value');",
       image: "",
     },
   },
@@ -100,7 +100,7 @@ const slides = [
       description:
         "You can dynamically add and remove elements using methods like appendChild, removeChild, insertBefore, and replaceChild.",
       codeSnippet:
-        "const newElement = \n\tdocument.createElement('div');\n\nparentElement.appendChild(newElement);\nparentElement.removeChild(childElement);",
+        "const newElement = document.createElement('div');\n\nparentElement.appendChild(newElement);\nparentElement.removeChild(childElement);",
       image: "",
     },
   },
