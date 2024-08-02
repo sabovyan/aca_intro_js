@@ -1,6 +1,6 @@
 :root {
   --header-font-size: 1.5rem;
-  --description-font-size: 1.2rem;
+  --description-font-size: 1.3rem;
   --code-font-size: 0.65rem;
 }
 /* .scroller { */
@@ -56,7 +56,7 @@
   font-size: var(--header-font-size, 1rem);
 
   font-weight: bold;
-  margin-block-end: 3rem;
+  margin-block-end: 1rem;
 }
 
 .body {
@@ -69,6 +69,7 @@
   /* grid-template-rows: minmax(100px, 1fr); */
   /* grid-template-columns: 1fr; */
   /* gap: 1rem; */
+  gap: 1em;
 }
 
 .code {
