@@ -38,12 +38,14 @@
 }
 
 .code {
+  background: #1e1e2e;
   padding: 2rem;
   font-size: var(--code-font-size, 12px);
 }
 
 .description {
   width: 100%;
+  color: light-dark(#333b3c, #9ca3af);
 }
 
 @media screen and (min-width: 992px) {

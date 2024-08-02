@@ -132,10 +132,7 @@ export default function Home() {
         {slides.map(async (slide) => {
           const code = await codeToHtml(slide.content.codeSnippet, {
             lang: "javascript",
-            theme: "vitesse-dark",
-            colorReplacements: {
-              "#121212": "#030712",
-            },
+            theme: "catppuccin-mocha",
           });
           return (
             <section key={slide.title}>
@@ -143,9 +140,7 @@ export default function Home() {
                 <h1>{slide.title}</h1>
               </header>
               <div className="body">
-                <p className="description text-gray-500">
-                  {slide.content.description}
-                </p>
+                <p className="description">{slide.content.description}</p>
                 {slide.content.codeSnippet && (
                   <div
                     className="code min-h-48 flex align-center rounded-lg bg-gray-950"
