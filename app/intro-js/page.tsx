@@ -4,6 +4,8 @@ import { SlideController } from "../components/SlideController";
 
 import "./page.css";
 import Image from "next/image";
+import { renderToStaticMarkup } from "react-dom/server";
+import { Copybutton } from "../components/CopyButton";
 
 const slides = [
   {
@@ -142,10 +144,12 @@ export default function Home() {
               <div className="body">
                 <p className="description">{slide.content.description}</p>
                 {slide.content.codeSnippet && (
-                  <div
-                    className="code min-h-48 flex align-center rounded-lg bg-gray-950"
-                    dangerouslySetInnerHTML={{ __html: code }}
-                  />
+                  <div className="relative">
+                    <div className="code min-h-48 flex align-center rounded-lg bg-gray-950">
+                      <div dangerouslySetInnerHTML={{ __html: code }} />
+                    </div>
+                    <Copybutton />
+                  </div>
                 )}
 
                 {slide.content.image && (
