@@ -1,7 +1,7 @@
 :root {
   --header-font-size: 1.5rem;
   --description-font-size: 1.3rem;
-  --code-font-size: 0.65rem;
+  --code-font-size: 1.2rem;
 }
 
 .scroller {
@@ -17,7 +17,6 @@
   scroll-snap-align: start;
   scroll-snap-stop: normal;
 
-  min-width: fit-content;
   height: 100vh;
   max-height: calc(100vh - var(--padding));
   position: relative;
@@ -39,8 +38,9 @@
 
 .code {
   background: #1e1e2e;
-  padding: 2rem;
+  padding: 3rem 1rem 1rem 1rem;
   font-size: var(--code-font-size, 12px);
+  overflow-x: auto;
 }
 
 .description {
