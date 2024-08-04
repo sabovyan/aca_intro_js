@@ -44,7 +44,7 @@ export function Copybutton() {
     <button
       ref={buttonRef}
       onClick={handleClick}
-      className="absolute top-2 right-2 text-xl hover:scale-125 px-2 rounded"
+      className="absolute top-2 right-2 text-xl hover:scale-125 px-2 rounded md:text-3xl"
       aria-label="copy content in code block"
       title={"copy"}
     >
