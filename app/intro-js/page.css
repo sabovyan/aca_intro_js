@@ -9,6 +9,18 @@
   overflow-y: auto;
   overscroll-behavior-y: contain;
   scroll-snap-type: y mandatory;
+  scrollbar-width: thin;
+}
+
+@media (prefers-color-scheme: dark) {
+  .scroller {
+    scrollbar-color: #9ca3af #333b3c;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .scroller {
+    scrollbar-color: #9ca3af #e5e7eb;
+  }
 }
 
 .scroller section {
