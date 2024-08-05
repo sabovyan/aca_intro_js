@@ -3,7 +3,7 @@ import Link from "next/link";
 const links = [
   {
     name: "Intro To JavaScript",
-    href: "intro-js",
+    href: "slides/js-intro",
   },
   {
     name: "html",

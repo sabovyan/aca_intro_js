@@ -1,6 +1,6 @@
 import { Slide } from "@/types/main";
 
-export const jsIntro: Slide[] = [
+export const JS_INTRO: Slide[] = [
   {
     title: "Introduction to JavaScript",
     items: [
