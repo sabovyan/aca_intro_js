@@ -4,13 +4,16 @@ import { SlideBody } from "../../components/SlideBody";
 
 import "./page.css";
 import { notFound } from "next/navigation";
+import { PY_SLIDES } from "@/constants/py-intro";
 
 const enum SlidesSlug {
   JsIntro = "js-intro",
+  PyIntro = "py-intro",
 }
 
 const SLIDES: { [k in SlidesSlug]?: Slide[] } = {
   [SlidesSlug.JsIntro]: JS_INTRO,
+  [SlidesSlug.PyIntro]: PY_SLIDES,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
