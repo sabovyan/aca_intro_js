@@ -23,8 +23,6 @@ export default function Page({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  console.log({ currentSlide, params });
-
   return (
     <main>
       <article className={"scroller"}>
