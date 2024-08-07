@@ -27,17 +27,12 @@ export const PY_SLIDES: Slide[] = [
         content:
           "To start coding in Python, you'll need to install Python on your computer. Visit the official Python website and download the latest version for your operating system.",
       },
-      // {
-      //   type: 'link',
-      //   order: 2,
-      //
-      // },
-      // {
-      //   type: "image",
-      //   order: 2,
-      //   url: "https://www.python.org/static/img/python-logo.png",
-      //   alt: "Python Website",
-      // },
+      {
+        type: "link",
+        title: "Download Python",
+        order: 2,
+        url: "https://www.python.org/downloads/",
+      },
     ],
   },
   {

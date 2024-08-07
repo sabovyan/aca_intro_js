@@ -4,6 +4,8 @@ export type SlideContentItem =
       order: number;
       content: string;
       url?: never;
+      title?: never;
+      description?: never;
     }
   | {
       type: "image";
@@ -11,6 +13,15 @@ export type SlideContentItem =
       url: string;
       alt?: string;
       content?: never;
+      title?: never;
+      description?: never;
+    }
+  | {
+      type: "link";
+      order: number;
+      url: string;
+      title: string;
+      description?: string;
     };
 
 export type Slide = {

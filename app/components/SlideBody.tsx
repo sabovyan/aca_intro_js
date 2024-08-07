@@ -3,6 +3,7 @@ import { SlideCodeSnippet } from "./SlideCodeSnippet";
 import { SlideDescription } from "./SlideDescription";
 
 import { SlideContentItem } from "@/types/main";
+import { SlideLink } from "./SlideLink";
 
 interface Props {
   items: SlideContentItem[];
@@ -23,6 +24,10 @@ export function SlideBody({ items, title }: Props) {
           return (
             <SlideCodeSnippet key={item.content} codeSnippet={item.content} />
           );
+        }
+
+        if (item.type === "link") {
+          return <SlideLink key={item.url} title={item.title} url={item.url} />;
         }
 
         if (item.type === "image") {
