@@ -50,7 +50,7 @@ export function SlideBody({ items, title }: Props) {
               alt={item.alt || title || "image"}
               width="500"
               height="500"
-              className="object-contain"
+              className="object-contain aspect-4/3"
             />
           );
         }
