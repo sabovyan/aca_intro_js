@@ -22,10 +22,14 @@ export const DJANGO_INTRO: Slide[] = [
     title: "Content",
     items: [
       {
-        type: "description",
+        type: "list",
         order: 1,
-        content:
-          "In this lesson, \n - we'll set up our development environment - create a simple 'Hello, World!' application using Django.",
+        itemsType: "bullet",
+        items: [
+          "we'll set up our development environment",
+          "create a simple 'Hello, World!' application using Django.",
+          "we'll build a RESTful API using Django",
+        ],
       },
     ],
   },

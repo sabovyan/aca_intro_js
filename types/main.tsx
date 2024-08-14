@@ -7,6 +7,19 @@ export type SlideContentItem =
       url?: never;
       title?: never;
       description?: never;
+      itemsType?: never;
+      items?: never;
+    }
+  | {
+      type: "list";
+      order: number;
+      content?: never;
+      lang?: never;
+      url?: never;
+      title?: never;
+      description?: never;
+      itemsType?: "bullet" | "number";
+      items?: string[];
     }
   | {
       type: "code";
@@ -16,6 +29,8 @@ export type SlideContentItem =
       url?: never;
       title?: never;
       description?: never;
+      itemsType?: never;
+      items?: never;
     }
   | {
       type: "image";
@@ -26,6 +41,8 @@ export type SlideContentItem =
       lang?: never;
       title?: never;
       description?: never;
+      itemsType?: never;
+      items?: never;
     }
   | {
       type: "link";
@@ -34,6 +51,8 @@ export type SlideContentItem =
       title: string;
       description?: string;
       lang?: never;
+      itemsType?: never;
+      items?: never;
     };
 
 export type Slide = {

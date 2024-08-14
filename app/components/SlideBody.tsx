@@ -55,6 +55,14 @@ export function SlideBody({ items, title }: Props) {
           );
         }
 
+        if (item.type === "list") {
+          return (
+            <ul key={item.title} className="list-disc ml-16 description">
+              {item.items?.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          );
+        }
+
         return null;
       })}
     </div>
