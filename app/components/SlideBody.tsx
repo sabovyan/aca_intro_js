@@ -4,6 +4,7 @@ import { SlideDescription } from "./SlideDescription";
 
 import { SlideContentItem } from "@/types/main";
 import { SlideLink } from "./SlideLink";
+import { SlideList } from "./SlideList";
 
 interface Props {
   items: SlideContentItem[];
@@ -57,9 +58,11 @@ export function SlideBody({ items, title }: Props) {
 
         if (item.type === "list") {
           return (
-            <ul key={item.title} className="list-disc ml-16 description">
-              {item.items?.map((item) => <li key={item}>{item}</li>)}
-            </ul>
+            <SlideList
+              key={item.title}
+              listType={item.itemsType}
+              items={item.items}
+            />
           );
         }
 
