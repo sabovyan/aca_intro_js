@@ -3,11 +3,12 @@ import { Copybutton } from "./CopyButton";
 
 interface Props {
   codeSnippet: string;
+  lang: string;
 }
 
-export async function SlideCodeSnippet({ codeSnippet }: Props) {
+export async function SlideCodeSnippet({ codeSnippet, lang }: Props) {
   const code = await codeToHtml(codeSnippet, {
-    lang: "javascript",
+    lang,
     theme: "catppuccin-mocha",
   });
   return (

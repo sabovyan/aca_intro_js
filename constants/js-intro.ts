@@ -28,6 +28,7 @@ export const JS_INTRO: Slide[] = [
       },
       {
         type: "code",
+        lang: "javascript",
         content: "let number = 5;\nconst name = 'John';\nvar isActive = true;",
         order: 2,
       },
@@ -45,6 +46,7 @@ export const JS_INTRO: Slide[] = [
       {
         order: 2,
         type: "code",
+        lang: "javascript",
         content:
           "if (number > 0) {\n  console.log('Positive number');\n} else {\n  console.log('Non-positive number');\n}",
       },
@@ -63,6 +65,7 @@ export const JS_INTRO: Slide[] = [
       {
         order: 2,
         type: "code",
+        lang: "javascript",
         content:
           "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\nlet j = 0;\nwhile (j < 5) {\n  console.log(j);\n  j++;\n}",
       },
@@ -80,6 +83,7 @@ export const JS_INTRO: Slide[] = [
       {
         order: 2,
         type: "code",
+        lang: "javascript",
         content:
           "function greet(name) {\n  return 'Hello, ' + name;\n}\n\nconst greet = (name) => 'Hello, ' + name;",
       },
@@ -97,6 +101,7 @@ export const JS_INTRO: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "javascript",
         content:
           "class Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n\n  greet() {\n    return `Hello, my name is ${this.name}`;\n  }\n}\n\nconst john = new Person('John', 30);\nconsole.log(john.greet());",
       },
@@ -130,6 +135,7 @@ export const JS_INTRO: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "javascript",
         content:
           "const element = document.getElementById('myElement');\nconst elements = document.querySelectorAll('.myClass');",
       },
@@ -147,6 +153,7 @@ export const JS_INTRO: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "javascript",
         content:
           "element.textContent = 'New Content';\nelement.style.color = 'red';\nelement.setAttribute('data-custom', 'value');",
       },
@@ -164,6 +171,7 @@ export const JS_INTRO: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "javascript",
         content:
           "const newElement = document.createElement('div');\n\nparentElement.appendChild(newElement);\nparentElement.removeChild(childElement);",
       },
@@ -180,6 +188,7 @@ export const JS_INTRO: Slide[] = [
       },
       {
         type: "code",
+        lang: "javascript",
         order: 2,
         content:
           "element.addEventListener('click', \nfunction() {\n  console.log('Element clicked');\n});",
@@ -198,6 +207,7 @@ export const JS_INTRO: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "javascript",
         content: "// TODO",
       },
     ],

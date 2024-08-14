@@ -12,6 +12,11 @@ const links = [
     href: "/slides/py-intro",
   },
   {
+    type: "slide",
+    name: "Intro To Django",
+    href: "/slides/django-intro",
+  },
+  {
     name: "html (a dummy file)",
     href: "/hello.html",
   },

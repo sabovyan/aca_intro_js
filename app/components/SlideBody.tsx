@@ -22,12 +22,23 @@ export function SlideBody({ items, title }: Props) {
 
         if (item.type === "code") {
           return (
-            <SlideCodeSnippet key={item.content} codeSnippet={item.content} />
+            <SlideCodeSnippet
+              key={item.content}
+              codeSnippet={item.content}
+              lang={item.lang}
+            />
           );
         }
 
         if (item.type === "link") {
-          return <SlideLink key={item.url} title={item.title} url={item.url} />;
+          return (
+            <SlideLink
+              key={item.url}
+              title={item.title}
+              url={item.url}
+              description={item.description}
+            />
+          );
         }
 
         if (item.type === "image") {

@@ -46,6 +46,7 @@ export const PY_SLIDES: Slide[] = [
       },
       {
         type: "code",
+        lang: "python",
         order: 2,
         content: "print('Hello, World!')",
       },
@@ -63,6 +64,7 @@ export const PY_SLIDES: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "python",
         content: "name = 'Alice'\nage = 25\nheight = 5.6",
       },
     ],
@@ -79,6 +81,7 @@ export const PY_SLIDES: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "python",
         content:
           "if age > 18:\n    print('You are an adult.')\nelse:\n    print('You are a minor.')",
       },
@@ -96,6 +99,7 @@ export const PY_SLIDES: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "python",
         content:
           "for i in range(5):\n    print(i)\n\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1",
       },
@@ -113,6 +117,7 @@ export const PY_SLIDES: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "python",
         content:
           "def greet(name):\n    print('Hello, ' + name)\n\ngreet('Alice')",
       },
@@ -130,6 +135,7 @@ export const PY_SLIDES: Slide[] = [
       {
         type: "code",
         order: 2,
+        lang: "python",
         content:
           "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def introduce(self):\n        print(f'My name is {self.name} and I am {self.age} years old.')\n\nperson = Person('Alice', 25)\nperson.introduce()",
       },

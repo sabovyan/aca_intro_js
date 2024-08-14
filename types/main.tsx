@@ -1,6 +1,16 @@
 export type SlideContentItem =
   | {
-      type: "description" | "code";
+      type: "description";
+      order: number;
+      content: string;
+      lang?: never;
+      url?: never;
+      title?: never;
+      description?: never;
+    }
+  | {
+      type: "code";
+      lang: "javascript" | "python" | "bash";
       order: number;
       content: string;
       url?: never;
@@ -13,6 +23,7 @@ export type SlideContentItem =
       url: string;
       alt?: string;
       content?: never;
+      lang?: never;
       title?: never;
       description?: never;
     }
@@ -22,6 +33,7 @@ export type SlideContentItem =
       url: string;
       title: string;
       description?: string;
+      lang?: never;
     };
 
 export type Slide = {

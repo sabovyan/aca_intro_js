@@ -52,7 +52,8 @@
   background: #1e1e2e;
   padding: 3rem 1rem 1rem 1rem;
   font-size: var(--code-font-size, 12px);
-  overflow-x: auto;
+  overflow: auto;
+  max-height: 400px;
 }
 
 .description {
