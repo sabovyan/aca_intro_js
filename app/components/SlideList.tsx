@@ -6,7 +6,11 @@ interface Props {
 export function SlideList({ items, listType }: Props) {
   return (
     <List listType={listType}>
-      {items?.map((item) => <li key={item}>{item}</li>)}
+      {items?.map((item) => (
+        <li key={item} className="text-balance">
+          {item}
+        </li>
+      ))}
     </List>
   );
 }
@@ -21,5 +25,5 @@ function List({ listType, ...rest }: ListProps) {
     return <ol {...rest} />;
   }
 
-  return <ul {...rest} className="list-disc ml-16 description" />;
+  return <ul {...rest} className="list-disc ml-8 description" />;
 }

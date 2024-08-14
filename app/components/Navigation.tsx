@@ -17,6 +17,11 @@ const links = [
     href: "/slides/django-intro",
   },
   {
+    type: "slide",
+    name: "Intro to UI/UX",
+    href: "/slides/uiux-intro",
+  },
+  {
     name: "html (a dummy file)",
     href: "/hello.html",
   },
