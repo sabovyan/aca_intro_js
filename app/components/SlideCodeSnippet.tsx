@@ -2,12 +2,12 @@ import { codeToHtml } from "shiki";
 import { Copybutton } from "./CopyButton";
 
 interface Props {
-  codeSnippet: string;
+  content: string;
   lang: string;
 }
 
-export async function SlideCodeSnippet({ codeSnippet, lang }: Props) {
-  const code = await codeToHtml(codeSnippet, {
+export async function SlideCodeSnippet({ content, lang }: Props) {
+  const code = await codeToHtml(content, {
     lang,
     theme: "catppuccin-mocha",
   });

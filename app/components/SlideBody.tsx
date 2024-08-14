@@ -8,65 +8,55 @@ import { SlideList } from "./SlideList";
 
 interface Props {
   items: SlideContentItem[];
-  title?: string;
 }
 
-export function SlideBody({ items, title }: Props) {
+type SlideItemTypeToWidgetMap = {
+  [key in SlideContentItem["type"]]?: React.ElementType;
+};
+
+function SlideImage({
+  url,
+  alt,
+  title,
+}: {
+  url: string;
+  alt: string;
+  title: string;
+}) {
+  return (
+    <Image
+      key={url}
+      loading="eager"
+      src={url}
+      alt={alt || title || "image"}
+      width="500"
+      height="500"
+      className="object-contain aspect-4/3"
+    />
+  );
+}
+
+const widgets: SlideItemTypeToWidgetMap = {
+  list: SlideList,
+  description: SlideDescription,
+  code: SlideCodeSnippet,
+  link: SlideLink,
+  image: SlideImage,
+};
+
+export function SlideBody({ items }: Props) {
   items.sort((item1, item2) => item1.order - item2.order);
 
   return (
     <div className="body">
       {items.map((item) => {
-        if (item.type === "description") {
-          return <SlideDescription key={item.content} content={item.content} />;
+        const Component = widgets[item.type];
+
+        if (!Component) {
+          return null;
         }
 
-        if (item.type === "code") {
-          return (
-            <SlideCodeSnippet
-              key={item.content}
-              codeSnippet={item.content}
-              lang={item.lang}
-            />
-          );
-        }
-
-        if (item.type === "link") {
-          return (
-            <SlideLink
-              key={item.url}
-              title={item.title}
-              url={item.url}
-              description={item.description}
-            />
-          );
-        }
-
-        if (item.type === "image") {
-          return (
-            <Image
-              key={item.url}
-              loading="eager"
-              src={item.url}
-              alt={item.alt || title || "image"}
-              width="500"
-              height="500"
-              className="object-contain aspect-4/3"
-            />
-          );
-        }
-
-        if (item.type === "list") {
-          return (
-            <SlideList
-              key={item.title}
-              listType={item.itemsType}
-              items={item.items}
-            />
-          );
-        }
-
-        return null;
+        return <Component key={item.title} {...item} />;
       })}
     </div>
   );
