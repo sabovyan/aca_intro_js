@@ -1,25 +1,32 @@
 import Link from "next/link";
 
+const SLIDES = "/slides";
+
 const links = [
   {
     type: "slide",
     name: "Intro To JavaScript",
-    href: "/slides/js-intro",
+    href: `${SLIDES}/js-intro`,
   },
   {
     type: "slide",
     name: "Intro To Python",
-    href: "/slides/py-intro",
+    href: `${SLIDES}/py-intro`,
   },
   {
     type: "slide",
     name: "Intro To Django",
-    href: "/slides/django-intro",
+    href: `${SLIDES}/django-intro`,
+  },
+  {
+    type: "slide",
+    name: "Intro To Databases",
+    href: `${SLIDES}/db-intro`,
   },
   {
     type: "slide",
     name: "Intro to UI/UX",
-    href: "/slides/uiux-intro",
+    href: `${SLIDES}/uiux-intro`,
   },
   {
     name: "html (a dummy file)",
@@ -45,9 +52,9 @@ export function Navigation({
         {filteredLinks.map((link) => (
           <li
             key={link.href}
-            className="list-disc mx-8 my-2 text-gray:400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-400"
+            className="list-disc mx-8 my-2 text-gray:400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-gray-400 text-2xl"
           >
-            <Link href={link.href} className="underline text-2xl">
+            <Link href={link.href} className="underline">
               {link.name}
             </Link>
           </li>

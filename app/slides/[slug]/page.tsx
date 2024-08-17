@@ -1,8 +1,9 @@
 import type { Slide } from "@/types/main";
 import { SlideBody } from "../../components/SlideBody";
-import { DJANGO_INTRO } from "@/constants/django-intro";
-import { PY_SLIDES } from "@/constants/py-intro";
 import { JS_INTRO } from "@/constants/js-intro";
+import { PY_SLIDES } from "@/constants/py-intro";
+import { DJANGO_INTRO } from "@/constants/django-intro";
+import { DB_SLIDES } from "@/constants/db-intro";
 import { UI_UX_SLIDES } from "@/constants/uiux-intro";
 
 import "./page.css";
@@ -12,6 +13,7 @@ const enum SlidesSlug {
   JsIntro = "js-intro",
   PyIntro = "py-intro",
   DjangoIntro = "django-intro",
+  DbIntro = "db-intro",
   UIUXIntro = "uiux-intro",
 }
 
@@ -20,6 +22,7 @@ const SLIDES: { [k in SlidesSlug]?: Slide[] } = {
   [SlidesSlug.PyIntro]: PY_SLIDES,
   [SlidesSlug.DjangoIntro]: DJANGO_INTRO,
   [SlidesSlug.UIUXIntro]: UI_UX_SLIDES,
+  [SlidesSlug.DbIntro]: DB_SLIDES,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {

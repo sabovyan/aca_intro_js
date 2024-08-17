@@ -23,7 +23,7 @@ export type SlideContentItem =
     }
   | {
       type: "code";
-      lang: "javascript" | "python" | "bash";
+      lang: "javascript" | "python" | "bash" | "html";
       order: number;
       content: string;
       url?: never;
