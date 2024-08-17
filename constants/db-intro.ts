@@ -167,14 +167,8 @@ export const DB_SLIDES: Slide[] = [
     title: "Introduction to Django and its ORM",
     items: [
       {
-        type: "description",
-        order: 1,
-        content:
-          "Django is a web framework that includes an ORM (Object-Relational Mapping) to interact with databases.",
-      },
-      {
         type: "list",
-        order: 2,
+        order: 1,
         itemsType: "bullet",
         items: [
           "ORM abstracts SQL into Python code",
@@ -185,7 +179,7 @@ export const DB_SLIDES: Slide[] = [
       {
         type: "code",
         lang: "python",
-        order: 3,
+        order: 2,
         content:
           "class Task(models.Model):\n    title = models.CharField(max_length=100)\n    description = models.TextField(blank=True)\n    completed = models.BooleanField(default=False)\n    created_at = models.DateTimeField(auto_now_add=True)",
       },
@@ -205,13 +199,6 @@ export const DB_SLIDES: Slide[] = [
         lang: "bash",
         order: 2,
         content: "django-admin startproject todoapp",
-      },
-      {
-        type: "code",
-        lang: "python",
-        order: 3,
-        content:
-          "# settings.py\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}",
       },
     ],
   },
@@ -234,12 +221,6 @@ export const DB_SLIDES: Slide[] = [
           "Create API views to handle CRUD operations",
           "Use routers to map URLs to API views",
         ],
-      },
-      {
-        type: "code",
-        lang: "bash",
-        order: 3,
-        content: "pip install djangorestframework",
       },
     ],
   },
