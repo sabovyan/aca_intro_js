@@ -1,0 +1,18 @@
+:root {
+  --min-description-font-size: 1rem;
+  --max-description-font-size: 3rem;
+}
+
+.description {
+  --min-value: var(--min-description-font-size, 1rem);
+  --max-value: var(--max-description-font-size, 3rem);
+
+  /* TODO color should set in main themme */
+  color: light-dark(#333b3c, #9ca3af);
+
+  font-size: clamp(
+    var(--min-description-font-size),
+    2vw,
+    var(--max-description-font-size)
+  );
+}

@@ -1,15 +1,44 @@
+export type TTitle = {
+  type: "title";
+  order: number;
+  content: string;
+  lang?: never;
+  url?: never;
+  title?: never;
+  description?: never;
+  itemsType?: never;
+  items?: never;
+};
+
+export type TDescription = {
+  type: "description";
+  order: number;
+  content: string;
+  lang?: never;
+  url?: never;
+  title?: never;
+  description?: never;
+  itemsType?: never;
+  items?: never;
+};
+
+export type TImage = {
+  type: "image";
+  order: number;
+  url: string;
+  alt?: string;
+  content?: never;
+  lang?: never;
+  title?: never;
+  description?: never;
+  itemsType?: never;
+  items?: never;
+};
+
 export type SlideContentItem =
-  | {
-      type: "description";
-      order: number;
-      content: string;
-      lang?: never;
-      url?: never;
-      title?: never;
-      description?: never;
-      itemsType?: never;
-      items?: never;
-    }
+  | TTitle
+  | TDescription
+  | TImage
   | {
       type: "list";
       order: number;
@@ -27,18 +56,6 @@ export type SlideContentItem =
       order: number;
       content: string;
       url?: never;
-      title?: never;
-      description?: never;
-      itemsType?: never;
-      items?: never;
-    }
-  | {
-      type: "image";
-      order: number;
-      url: string;
-      alt?: string;
-      content?: never;
-      lang?: never;
       title?: never;
       description?: never;
       itemsType?: never;

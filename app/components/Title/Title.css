@@ -1,0 +1,15 @@
+:root {
+  --min-heading-1-value: 1.5rem;
+  --max-heading-1-value: 5rem;
+}
+
+.heading-1 {
+  --min-value: var(--min-heading-1-value, 1.5rem);
+  --max-value: var(--max-heading-1-value, 5rem);
+  font-size: clamp(var(--min-value), 4vw, var(--max-value));
+  font-weight: bold;
+}
+
+.header {
+  margin: 1rem 0;
+}
