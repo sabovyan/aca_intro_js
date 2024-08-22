@@ -29,6 +29,11 @@ const links = [
     href: `${SLIDES}/uiux-intro`,
   },
   {
+    type: "slide",
+    name: "Intro To Devops",
+    href: `${SLIDES}/devops-intro`,
+  },
+  {
     name: "html (a dummy file)",
     href: "/hello.html",
   },

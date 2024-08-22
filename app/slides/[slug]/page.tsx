@@ -8,6 +8,7 @@ import { UI_UX_SLIDES } from "@/constants/uiux-intro";
 
 import "./page.css";
 import { notFound } from "next/navigation";
+import { DEVOPS_INTRO } from "@/constants/devops-intro";
 
 const enum SlidesSlug {
   JsIntro = "js-intro",
@@ -15,6 +16,7 @@ const enum SlidesSlug {
   DjangoIntro = "django-intro",
   DbIntro = "db-intro",
   UIUXIntro = "uiux-intro",
+  DevopsIntro = "devops-intro",
 }
 
 const SLIDES: { [k in SlidesSlug]?: Slide[] } = {
@@ -23,6 +25,7 @@ const SLIDES: { [k in SlidesSlug]?: Slide[] } = {
   [SlidesSlug.DjangoIntro]: DJANGO_INTRO,
   [SlidesSlug.UIUXIntro]: UI_UX_SLIDES,
   [SlidesSlug.DbIntro]: DB_SLIDES,
+  [SlidesSlug.DevopsIntro]: DEVOPS_INTRO,
 };
 
 export default function Page({ params }: { params: { slug: string } }) {
