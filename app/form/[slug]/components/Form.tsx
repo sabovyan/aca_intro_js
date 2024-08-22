@@ -57,7 +57,7 @@ export function TestYourKnowledgeForm({ questions }: Props) {
               return (
                 <label
                   htmlFor={opt.value + opt.label}
-                  className={`mt-4 p-2 min-w-96 block rounded-lg ${classForCorrect} border border-stone-400`}
+                  className={`mt-4 p-2 block rounded-lg ${classForCorrect} border border-stone-400`}
                   key={opt.value}
                 >
                   <input
