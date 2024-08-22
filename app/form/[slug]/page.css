@@ -1,0 +1,41 @@
+:root {
+  --accent-color: light-dark(
+    theme("colors.stone.900"),
+    theme("colors.stone.500")
+  );
+  accent-color: var(--accent-color);
+}
+
+label:has(input:checked),
+label:has(input:focus) {
+  border: 1px solid theme("colors.stone.500");
+  background: var(--accent-color);
+  color: light-dark(theme("colors.stone.300"), theme("colors.stone.200"));
+}
+
+fieldset {
+  border: 1px solid var(--accent-color);
+}
+
+fieldset:has(input:focus) {
+  border-color: light-dark(
+    theme("colors.stone.900"),
+    theme("colors.stone.300")
+  );
+
+  border-width: 2px;
+}
+
+fieldset:has(label > input:user-invalid) {
+  background: light-dark(theme("colors.red.200"), theme("colors.red.950"));
+}
+
+form:is(.submitted) label.correct {
+  background: theme("colors.green.900");
+  border-color: theme("colors.green.900");
+}
+
+form:is(.submitted) label:not(.correct):has(input:checked) {
+  background: theme("colors.red.900");
+  border-color: theme("colors.red.900");
+}

@@ -1,7 +1,8 @@
 import { TLink } from "@/types/link";
 import { SLUGS } from "./slugs";
 
-const SLIDES = "/slides/";
+const SLIDES_PREFIX = "/slides/";
+const FORM_PAGE_PREFIX = "/form/";
 
 type SlugValus = (typeof SLUGS)[keyof typeof SLUGS];
 
@@ -14,10 +15,36 @@ const nameToSlugMapForSlides: { [k in SlugValus]: string } = {
   "django-intro": "Intro To Django",
 };
 
-export const SLIDES_LINKS: TLink<"slide">[] = Object.values(SLUGS).map(
+const nameToSlugMapForTests: { [k in SlugValus]: string } = {
+  "devops-intro": "DevOps",
+  "django-intro": "Django",
+  "uiux-intro": "UI/UX",
+  "py-intro": "Python",
+  "js-intro": "JavaScript",
+  "db-intro": "Databases",
+};
+
+export const SLIDES_LINKS: TLink<"slides">[] = Object.values(SLUGS).map(
   (slug) => ({
-    type: "slide",
+    type: "slides",
     name: nameToSlugMapForSlides[slug],
-    href: `${SLIDES}${slug}`,
+    href: `${SLIDES_PREFIX}${slug}`,
   }),
 );
+
+export const TESTS_LINKS: TLink<"form">[] = Object.values(SLUGS).map(
+  (slug) => ({
+    type: "form",
+    name: nameToSlugMapForTests[slug],
+    href: `${FORM_PAGE_PREFIX}${slug}`,
+  }),
+);
+
+export const notReadyTestLinks = [
+  "/form/js-intro",
+  "/form/py-intro",
+  "/form/db-intro",
+  "/form/uiux-intro",
+  "/form/django-intro",
+  "",
+];
