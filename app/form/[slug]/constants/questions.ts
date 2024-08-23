@@ -1,21 +1,4 @@
-export type TestItem = {
-  field: CourseTopics;
-  question: string;
-  options: { value: string; label: string }[];
-  correctAnswer: string;
-};
-
-enum CourseTopics {
-  Ecosystem = 1,
-  ProgrammingLanguages,
-  FrontendDevelopment,
-  BackendDevelopment,
-  DevOpsCulture,
-  QualityAssurance,
-  UIUXDesign,
-  MachineLearning,
-  AdditionalTopics,
-}
+import { CourseTopics, TestItem } from "@/types/questions";
 
 export const devopsQuestions: TestItem[] = [
   {

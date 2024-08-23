@@ -2,7 +2,10 @@ import { notFound } from "next/navigation";
 
 import { SLUGS } from "@/constants/slugs";
 import { TestYourKnowledgeForm } from "./components/Form";
-import { devopsQuestions, TestItem } from "./constants/questions";
+import { devopsQuestions } from "./constants/questions";
+import { qualityAssuranceQuestion } from "./constants/qa_questions";
+
+import { TestItem } from "@/types/questions";
 import "./page.css";
 
 type SlugValue = (typeof SLUGS)[keyof typeof SLUGS];
@@ -15,6 +18,7 @@ interface Props {
 
 const TESTS: { [key in SlugValue]?: TestItem[] } = {
   [SLUGS.DevopsIntro]: devopsQuestions,
+  [SLUGS.QaIntro]: qualityAssuranceQuestion,
 };
 
 export default function Test({ params: { slug } }: Props) {
@@ -24,5 +28,5 @@ export default function Test({ params: { slug } }: Props) {
     return notFound();
   }
 
-  return <TestYourKnowledgeForm questions={devopsQuestions} />;
+  return <TestYourKnowledgeForm questions={questions} />;
 }

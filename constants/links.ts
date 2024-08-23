@@ -13,6 +13,7 @@ const nameToSlugMapForSlides: { [k in SlugValus]: string } = {
   "uiux-intro": "Intro to UI/UX",
   "devops-intro": "Intro To Devops",
   "django-intro": "Intro To Django",
+  "qa-intro": "Intro To Quality Assurance",
 };
 
 const nameToSlugMapForTests: { [k in SlugValus]: string } = {
@@ -22,6 +23,7 @@ const nameToSlugMapForTests: { [k in SlugValus]: string } = {
   "py-intro": "Python",
   "js-intro": "JavaScript",
   "db-intro": "Databases",
+  "qa-intro": "Quality Assurance",
 };
 
 export const SLIDES_LINKS: TLink<"slides">[] = Object.values(SLUGS).map(

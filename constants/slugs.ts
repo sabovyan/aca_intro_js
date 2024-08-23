@@ -5,4 +5,5 @@ export const SLUGS = {
   DbIntro: "db-intro",
   UIUXIntro: "uiux-intro",
   DevopsIntro: "devops-intro",
+  QaIntro: "qa-intro",
 } as const;
