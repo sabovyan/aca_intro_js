@@ -24,9 +24,5 @@ export default function Test({ params: { slug } }: Props) {
     return notFound();
   }
 
-  return (
-    <main className="dark:bg-stone-900 bg-stone-200 p-4">
-      <TestYourKnowledgeForm questions={devopsQuestions} />
-    </main>
-  );
+  return <TestYourKnowledgeForm questions={devopsQuestions} />;
 }

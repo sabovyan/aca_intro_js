@@ -10,9 +10,9 @@ export default function form({}: Props) {
   );
 
   return (
-    <main className="p-8">
+    <>
       <H1>Tests</H1>
       <Navigation links={filtered} />
-    </main>
+    </>
   );
 }
