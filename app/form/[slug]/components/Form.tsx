@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { TestItem } from "../constants/questions";
+import { TestItem } from "@/types/questions";
 
 interface Props {
   questions: TestItem[];
