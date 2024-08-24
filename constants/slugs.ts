@@ -6,4 +6,5 @@ export const SLUGS = {
   UIUXIntro: "uiux-intro",
   DevopsIntro: "devops-intro",
   QaIntro: "qa-intro",
+  Ecosystem: "ecosystem-intro",
 } as const;

@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = `my-cache-v1`;
+const CACHE_NAME = `my-cache-v1.2`;
 
 install();
 removeOutdatedCache();

@@ -14,6 +14,7 @@ const nameToSlugMapForSlides: { [k in SlugValus]: string } = {
   "devops-intro": "Intro To Devops",
   "django-intro": "Intro To Django",
   "qa-intro": "Intro To Quality Assurance",
+  "ecosystem-intro": "Intro To The Ecosystem",
 };
 
 const nameToSlugMapForTests: { [k in SlugValus]: string } = {
@@ -24,6 +25,7 @@ const nameToSlugMapForTests: { [k in SlugValus]: string } = {
   "js-intro": "JavaScript",
   "db-intro": "Databases",
   "qa-intro": "Quality Assurance",
+  "ecosystem-intro": "Ecosystem",
 };
 
 export const SLIDES_LINKS: TLink<"slides">[] = Object.values(SLUGS).map(
@@ -43,7 +45,6 @@ export const TESTS_LINKS: TLink<"form">[] = Object.values(SLUGS).map(
 );
 
 export const notReadyTestLinks = [
-  "/form/js-intro",
   "/form/py-intro",
   "/form/db-intro",
   "/form/uiux-intro",
