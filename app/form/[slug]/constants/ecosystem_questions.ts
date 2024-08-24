@@ -40,7 +40,7 @@ export const ecosystemTestQuestions: TestItem[] = [
   {
     field: CourseTopics.Ecosystem,
     question:
-      "Which of the following is an example of a software application used for database management? / Ո՞րը ծրագրային ապահովման դիմումի օրինակ է, որն օգտագործվում է տվյալների բազայի կառավարման համար:",
+      "Which of the following is an example of a software application used for database management? / Ո՞րը ծրագրային հավելվածի օրինակ է, որն օգտագործվում է տվյալների բազայի կառավարման համար:",
     options: [
       { value: "a", label: "MySQL" },
       { value: "b", label: "Windows 11" },

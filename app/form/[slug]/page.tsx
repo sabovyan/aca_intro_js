@@ -9,6 +9,7 @@ import { TestItem } from "@/types/questions";
 import "./page.css";
 import { JS_QUESTIONS } from "./constants/js_questions";
 import { ecosystemTestQuestions } from "./constants/ecosystem_questions";
+import { PROGRAMMING_LANGUAGES_QUESTIONS } from "./constants/programming_languages";
 
 type SlugValue = (typeof SLUGS)[keyof typeof SLUGS];
 
@@ -19,10 +20,11 @@ interface Props {
 }
 
 const TESTS: { [key in SlugValue]?: TestItem[] } = {
+  [SLUGS.Ecosystem]: ecosystemTestQuestions,
+  [SLUGS.ProgrammingLanguages]: PROGRAMMING_LANGUAGES_QUESTIONS,
   [SLUGS.DevopsIntro]: devopsQuestions,
   [SLUGS.QaIntro]: qualityAssuranceQuestion,
   [SLUGS.JsIntro]: JS_QUESTIONS,
-  [SLUGS.Ecosystem]: ecosystemTestQuestions,
 };
 
 export default function Test({ params: { slug } }: Props) {
