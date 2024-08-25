@@ -16,6 +16,7 @@ const nameToSlugMapForSlides: { [k in SlugValus]: string } = {
   "qa-intro": "Intro To Quality Assurance",
   "ecosystem-intro": "Intro To The Ecosystem",
   "programming-languages-intro": "intro to Programming Languages",
+  "frontend-intro": "Basics of frontend development",
 };
 
 const nameToSlugMapForTests: { [k in SlugValus]: string } = {
@@ -28,11 +29,26 @@ const nameToSlugMapForTests: { [k in SlugValus]: string } = {
   "qa-intro": "Quality Assurance",
   "ecosystem-intro": "Ecosystem",
   "programming-languages-intro": "Programming Languages",
+  "frontend-intro": "Basics of frontend development",
+};
+
+const SlugOrder: { [k in SlugValus]: number } = {
+  "ecosystem-intro": 1,
+  "programming-languages-intro": 2,
+  "frontend-intro": 3,
+  "js-intro": 4,
+  "py-intro": 5,
+  "django-intro": 6,
+  "db-intro": 7,
+  "devops-intro": 8,
+  "qa-intro": 9,
+  "uiux-intro": 10,
 };
 
 export const SLIDES_LINKS: TLink<"slides">[] = Object.values(SLUGS).map(
   (slug) => ({
     type: "slides",
+    order: SlugOrder[slug],
     name: nameToSlugMapForSlides[slug],
     href: `${SLIDES_PREFIX}${slug}`,
   }),
@@ -41,6 +57,7 @@ export const SLIDES_LINKS: TLink<"slides">[] = Object.values(SLUGS).map(
 export const TESTS_LINKS: TLink<"form">[] = Object.values(SLUGS).map(
   (slug) => ({
     type: "form",
+    order: SlugOrder[slug],
     name: nameToSlugMapForTests[slug],
     href: `${FORM_PAGE_PREFIX}${slug}`,
   }),
@@ -51,5 +68,10 @@ export const notReadyTestLinks = [
   "/form/db-intro",
   "/form/uiux-intro",
   "/form/django-intro",
-  "",
+];
+
+export const notAvailableSlideLinks = [
+  "/slides/ecosystem-intro",
+  "/slides/frontend-intro",
+  "/slides/programming-languages-intro",
 ];

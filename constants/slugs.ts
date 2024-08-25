@@ -8,4 +8,5 @@ export const SLUGS = {
   QaIntro: "qa-intro",
   Ecosystem: "ecosystem-intro",
   ProgrammingLanguages: "programming-languages-intro",
+  Frontend: "frontend-intro",
 } as const;

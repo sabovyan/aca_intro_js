@@ -37,7 +37,7 @@ export default function RegisterServiceWorker({}: Props) {
         } else if (registration.active) {
           serviceWorker = registration.active;
           /* eslint-disable-next-line no-console */
-          console.log("sw is actice");
+          console.log("sw is active");
         }
 
         // if (serviceWorker) {

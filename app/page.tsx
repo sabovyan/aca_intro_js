@@ -8,10 +8,18 @@ export default function Home() {
       <H1>HTI Regional Program</H1>
       <div className="flex gap-8 flex-col lg:flex-row">
         <section>
-          <Navigation links={SLIDES_LINKS} heading="Links To Slides" />
+          <Navigation
+            links={SLIDES_LINKS}
+            heading="Links To Slides"
+            listType="ol"
+          />
         </section>
         <section>
-          <Navigation links={TESTS_LINKS} heading="Links To Tests" />
+          <Navigation
+            links={TESTS_LINKS}
+            heading="Links To Quizzes"
+            listType="ol"
+          />
         </section>
       </div>
     </main>
