@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = `my-cache-v1.3`;
+const CACHE_NAME = `my-cache-v1.4`;
 
 install();
 removeOutdatedCache();
@@ -23,16 +23,21 @@ function removeOutdatedCache() {
     const cacheWhitelist = [CACHE_NAME];
 
     event.waitUntil(
-      caches.keys().then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheWhitelist.indexOf(cacheName) === -1) {
-              // If the cache name is not in the whitelist, delete it
-              return caches.delete(cacheName);
-            }
-          }),
-        );
-      }),
+      caches
+        .keys()
+        .then((keys) =>
+          Promise.all(
+            keys.map((key) => {
+              if (!cacheWhitelist.includes(key)) {
+                return caches.delete(key);
+              }
+            }),
+          ),
+        )
+        .then(() => {
+          /* eslint-disable-next-line */
+          console.log("V2 now ready to handle fetches!");
+        }),
     );
   });
 }
