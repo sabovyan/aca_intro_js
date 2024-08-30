@@ -3,15 +3,15 @@ import { notFound } from "next/navigation";
 import { SLUGS } from "@/constants/slugs";
 import { TestYourKnowledgeForm } from "./components/Form";
 
-import { ecosystem_quiz } from "./constants/ecosystem_questions";
-import { programming_languages_quiz } from "./constants/programming_languages";
-import { frontend_quiz } from "./constants/frontend_questions";
-import { js_quiz } from "./constants/js_questions";
-import { py_quiz } from "./constants/py_questions";
+import { ecosystem_quiz } from "./constants/ecosystem_quiz";
+import { programming_languages_quiz } from "./constants/pl_quiz";
+import { frontend_quiz } from "./constants/frontend_quiz";
+import { js_quiz } from "./constants/js_quiz";
+import { py_quiz } from "./constants/py_quiz";
 import { django_quiz } from "./constants/django_quiz";
-import { devops_quiz } from "./constants/devops_questions";
-import { qa_quiz } from "./constants/qa_questions";
-import { uiux_quiz } from "./constants/ui_ux_questions";
+import { devops_quiz } from "./constants/devops_quiz";
+import { qa_quiz } from "./constants/qa_quiz";
+import { uiux_quiz } from "./constants/ui_ux_quiz";
 
 import { TestItem } from "@/types/questions";
 import "./page.css";
