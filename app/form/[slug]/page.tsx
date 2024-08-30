@@ -2,18 +2,19 @@ import { notFound } from "next/navigation";
 
 import { SLUGS } from "@/constants/slugs";
 import { TestYourKnowledgeForm } from "./components/Form";
-import { devopsQuestions } from "./constants/questions";
-import { qualityAssuranceQuestion } from "./constants/qa_questions";
+
+import { ecosystem_quiz } from "./constants/ecosystem_questions";
+import { programming_languages_quiz } from "./constants/programming_languages";
+import { frontend_quiz } from "./constants/frontend_questions";
+import { js_quiz } from "./constants/js_questions";
+import { py_quiz } from "./constants/py_questions";
+import { django_quiz } from "./constants/django_quiz";
+import { devops_quiz } from "./constants/devops_questions";
+import { qa_quiz } from "./constants/qa_questions";
+import { uiux_quiz } from "./constants/ui_ux_questions";
 
 import { TestItem } from "@/types/questions";
 import "./page.css";
-import { JS_QUESTIONS } from "./constants/js_questions";
-import { ecosystemTestQuestions } from "./constants/ecosystem_questions";
-import { PROGRAMMING_LANGUAGES_QUESTIONS } from "./constants/programming_languages";
-import { UIUX_QUESTIONS } from "./constants/ui_ux_questions";
-import { FRONTEND_QUESTIONS } from "./constants/frontend_questions";
-import { PY_QUIZ } from "./constants/py_questions";
-import { DJANGO_QUIZ } from "./constants/django_quiz";
 
 type SlugValue = (typeof SLUGS)[keyof typeof SLUGS];
 
@@ -24,15 +25,15 @@ interface Props {
 }
 
 const TESTS: { [key in SlugValue]?: TestItem[] } = {
-  [SLUGS.Ecosystem]: ecosystemTestQuestions,
-  [SLUGS.ProgrammingLanguages]: PROGRAMMING_LANGUAGES_QUESTIONS,
-  [SLUGS.DevopsIntro]: devopsQuestions,
-  [SLUGS.QaIntro]: qualityAssuranceQuestion,
-  [SLUGS.JsIntro]: JS_QUESTIONS,
-  [SLUGS.UIUXIntro]: UIUX_QUESTIONS,
-  [SLUGS.Frontend]: FRONTEND_QUESTIONS,
-  [SLUGS.PyIntro]: PY_QUIZ,
-  [SLUGS.DjangoIntro]: DJANGO_QUIZ,
+  [SLUGS.Ecosystem]: ecosystem_quiz,
+  [SLUGS.ProgrammingLanguages]: programming_languages_quiz,
+  [SLUGS.Frontend]: frontend_quiz,
+  [SLUGS.JsIntro]: js_quiz,
+  [SLUGS.PyIntro]: py_quiz,
+  [SLUGS.DjangoIntro]: django_quiz,
+  [SLUGS.DevopsIntro]: devops_quiz,
+  [SLUGS.QaIntro]: qa_quiz,
+  [SLUGS.UIUXIntro]: uiux_quiz,
 };
 
 export default function Test({ params: { slug } }: Props) {

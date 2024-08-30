@@ -1,6 +1,6 @@
 import { CourseTopics, TestItem } from "@/types/questions";
 
-export const qualityAssuranceQuestion: TestItem[] = [
+export const qa_quiz: TestItem[] = [
   {
     field: CourseTopics.QualityAssurance,
     question: "Ո՞րն է որակի ապահովման (QA) հիմնական նպատակը:",

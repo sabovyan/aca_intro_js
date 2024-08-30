@@ -1,6 +1,6 @@
 import { CourseTopics, TestItem } from "@/types/questions";
 
-export const UIUX_QUESTIONS: TestItem[] = [
+export const uiux_quiz: TestItem[] = [
   {
     field: CourseTopics.UIUXDesign,
     question:

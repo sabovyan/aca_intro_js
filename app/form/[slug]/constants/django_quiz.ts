@@ -1,6 +1,6 @@
 import { CourseTopics, TestItem } from "@/types/questions";
 
-export const DJANGO_QUIZ: TestItem[] = [
+export const django_quiz: TestItem[] = [
   {
     field: CourseTopics.BackendDevelopment,
     question: "What is backend development? / Ի՞նչ է backend ծրագրավորումը:",

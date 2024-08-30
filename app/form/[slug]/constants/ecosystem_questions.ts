@@ -1,6 +1,6 @@
 import { CourseTopics, TestItem } from "@/types/questions";
 
-export const ecosystemTestQuestions: TestItem[] = [
+export const ecosystem_quiz: TestItem[] = [
   {
     field: CourseTopics.Ecosystem,
     question:

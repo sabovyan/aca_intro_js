@@ -1,6 +1,6 @@
 import { CourseTopics, TestItem } from "@/types/questions";
 
-export const FRONTEND_QUESTIONS: TestItem[] = [
+export const frontend_quiz: TestItem[] = [
   {
     field: CourseTopics.FrontendDevelopment,
     question:

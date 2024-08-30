@@ -1,6 +1,6 @@
 import { CourseTopics, TestItem } from "@/types/questions";
 
-export const PY_QUIZ: TestItem[] = [
+export const py_quiz: TestItem[] = [
   {
     field: CourseTopics.BackendDevelopment,
     question:

@@ -1,6 +1,6 @@
 import { CourseTopics, TestItem } from "@/types/questions";
 
-export const devopsQuestions: TestItem[] = [
+export const devops_quiz: TestItem[] = [
   {
     field: CourseTopics.DevOpsCulture,
     question: "Ո՞րն է DevOps-ի հիմնական նպատակը:",
