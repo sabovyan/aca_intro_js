@@ -15,6 +15,7 @@ import { uiux_quiz } from "./constants/ui_ux_quiz";
 
 import { TestItem } from "@/types/questions";
 import "./page.css";
+import { db_quiz } from "./constants/db_quiz";
 
 type SlugValue = (typeof SLUGS)[keyof typeof SLUGS];
 
@@ -31,6 +32,7 @@ const TESTS: { [key in SlugValue]?: TestItem[] } = {
   [SLUGS.JsIntro]: js_quiz,
   [SLUGS.PyIntro]: py_quiz,
   [SLUGS.DjangoIntro]: django_quiz,
+  [SLUGS.DbIntro]: db_quiz,
   [SLUGS.DevopsIntro]: devops_quiz,
   [SLUGS.QaIntro]: qa_quiz,
   [SLUGS.UIUXIntro]: uiux_quiz,
