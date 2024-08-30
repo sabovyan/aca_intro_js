@@ -57,6 +57,33 @@ export const UI_UX_SLIDES: Slide[] = [
     ],
   },
   {
+    title: "Bad UX Examples",
+    items: [
+      {
+        order: 1,
+        type: "list",
+        itemsType: "bullet",
+        items: [
+          "Poor Navigation",
+          "Slow Loading Times",
+          "Non-Responsive Design",
+          "Auto-Playing Media",
+          "Unreadable Fonts or Poor Typography",
+          "Lack of Search Functionality",
+          "Excessive Pop-Ups or Ads",
+          "Cluttered Page Layout",
+          "Lack of Clear Call-to-Action",
+          "Complex Registration Processes",
+          "Neglecting SEO Practices",
+          "Broken Links and 404 Errors",
+          "Ignoring Accessibility",
+          "Ineffective Use of Images and Graphics",
+          "Inconsistent Design",
+        ],
+      },
+    ],
+  },
+  {
     title: "Introduction to Design Tools",
     items: [
       {
