@@ -173,9 +173,11 @@ function NavigationLink({
   }
 
   if (type === "internal") {
-    <Link href={url}>
-      <ButtonForLink>&#9998; Slide</ButtonForLink>
-    </Link>;
+    return (
+      <Link href={url}>
+        <ButtonForLink>&#9998; Slide</ButtonForLink>
+      </Link>
+    );
   }
 
   return (
