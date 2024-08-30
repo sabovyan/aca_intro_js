@@ -13,6 +13,7 @@ import { PROGRAMMING_LANGUAGES_QUESTIONS } from "./constants/programming_languag
 import { UIUX_QUESTIONS } from "./constants/ui_ux_questions";
 import { FRONTEND_QUESTIONS } from "./constants/frontend_questions";
 import { PY_QUIZ } from "./constants/py_questions";
+import { DJANGO_QUIZ } from "./constants/django_quiz";
 
 type SlugValue = (typeof SLUGS)[keyof typeof SLUGS];
 
@@ -31,6 +32,7 @@ const TESTS: { [key in SlugValue]?: TestItem[] } = {
   [SLUGS.UIUXIntro]: UIUX_QUESTIONS,
   [SLUGS.Frontend]: FRONTEND_QUESTIONS,
   [SLUGS.PyIntro]: PY_QUIZ,
+  [SLUGS.DjangoIntro]: DJANGO_QUIZ,
 };
 
 export default function Test({ params: { slug } }: Props) {
