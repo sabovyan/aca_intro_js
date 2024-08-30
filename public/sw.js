@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = `my-cache-v1.0.6`;
+const CACHE_NAME = `my-cache-v1.0.7`;
 
 install();
 removeOutdatedCache();
@@ -29,6 +29,8 @@ function removeOutdatedCache() {
           Promise.all(
             keys.map((key) => {
               if (!cacheWhitelist.includes(key)) {
+                /* eslint-disable-next-line */
+                console.log(`key ${key} is deleted`);
                 return caches.delete(key);
               }
             }),

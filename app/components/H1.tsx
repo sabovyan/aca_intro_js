@@ -5,7 +5,10 @@ export function H1({
   ...props
 }: DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>) {
   return (
-    <h1 {...props} className="text-5xl font-bold my-16 text-stone-700">
+    <h1
+      {...props}
+      className="text-5xl font-bold my-16 text-stone-700 dark:text-stone-400"
+    >
       {children}
     </h1>
   );

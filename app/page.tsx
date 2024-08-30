@@ -125,7 +125,7 @@ export default function Home() {
   return (
     <main className="p-8">
       <H1>HTI Regional Program</H1>
-      <nav className="text-stone-600 main-nav">
+      <nav className="text-stone-600 dark:text-stone-400 main-nav">
         <h2 className="text-3xl mb-4 font-bold">Content</h2>
         <ol className="list-decimal ml-4">
           {topics.map((topic) => {
@@ -191,7 +191,7 @@ function ButtonForLink(props: ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
       {...props}
-      className="min-w-14 border border-stone-700 py-1 px-2 rounded-xl bor disabled:text-stone-400 disabled:border-stone-400 disabled:cursor-not-allowed text-nowrap"
+      className="min-w-14 border border-stone-700 py-1 px-2 rounded-xl bor disabled:text-stone-400 disabled:border-stone-400 dark:disabled:text-stone-800 dark:disabled:border-stone-800 disabled:cursor-not-allowed text-nowrap"
     />
   );
 }
