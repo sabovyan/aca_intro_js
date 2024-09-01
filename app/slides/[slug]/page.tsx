@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import type { Slide } from "@/types/main";
@@ -23,6 +24,15 @@ const SLIDES: { [k in SlugValues]?: Slide[] } = {
   [SLUGS.DbIntro]: DB_SLIDES,
   [SLUGS.DevopsIntro]: DEVOPS_INTRO,
   [SLUGS.QaIntro]: QA_INTRO,
+};
+
+export const metadata: Metadata = {
+  title: "Sisian - HTI Regional Program",
+  description:
+    "Explore our comprehensive technology education program designed for non-technical learners. Our courses cover essential topics like frontend and backend development, DevOps, machine learning, UI/UX design, and more. Whether you're a beginner or looking to specialize, our engaging and practical approach makes tech learning accessible and fun. Start your journey with us today and unlock your potential in the tech ecosystem.",
+  openGraph: {
+    title: "HTI Regional Program (Sisian)",
+  },
 };
 
 export default function Page({ params }: { params: { slug: string } }) {

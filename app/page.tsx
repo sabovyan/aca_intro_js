@@ -121,10 +121,39 @@ const topics: Topic[] = [
   },
 ];
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sisian - HTI Regional Program",
+  description:
+    "Explore our comprehensive technology education program designed for non-technical learners. Our courses cover essential topics like frontend and backend development, DevOps, machine learning, UI/UX design, and more. Whether you're a beginner or looking to specialize, our engaging and practical approach makes tech learning accessible and fun. Start your journey with us today and unlock your potential in the tech ecosystem.",
+  openGraph: {
+    title: "HTI Regional Program (Sisian)",
+  },
+};
+
 export default function Home() {
   return (
     <main className="p-8">
       <H1>HTI Regional Program</H1>
+      <section className="mb-8 text-xl">
+        <p className="flex flex-col">
+          <em>
+            Below (👇) is a special type of quiz, that is based on all of the
+            topics that we have learnt together
+          </em>
+        </p>
+        <p>
+          <strong>I dare you</strong>{" "}
+          <Link
+            href="/form/random"
+            className="bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent"
+          >
+            to click on this link!
+          </Link>
+        </p>
+      </section>
+      <hr className="my-8 border-stone-400" />
       <nav className="text-stone-600 dark:text-stone-400 main-nav">
         <h2 className="text-3xl mb-4 font-bold">Content</h2>
         <ol className="list-decimal ml-4">
@@ -153,6 +182,7 @@ export default function Home() {
           })}
         </ol>
       </nav>
+      <hr className="my-8 border-stone-400" />
     </main>
   );
 }
