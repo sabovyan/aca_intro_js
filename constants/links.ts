@@ -57,21 +57,12 @@ export const SLIDES_LINKS: TLink<"slides">[] = Object.values(SLUGS).map(
   }),
 );
 
-export const TESTS_LINKS: TLink<"form">[] = Object.values(SLUGS).map(
-  (slug) => ({
-    type: "form",
-    order: SlugOrder[slug],
-    name: nameToSlugMapForTests[slug],
-    href: `${FORM_PAGE_PREFIX}${slug}`,
-  }),
-);
-
-export const notReadyTestLinks = [
-  "/form/py-intro",
-  "/form/db-intro",
-  "/form/uiux-intro",
-  "/form/django-intro",
-];
+export const quiz_links: TLink<"form">[] = Object.values(SLUGS).map((slug) => ({
+  type: "form",
+  order: SlugOrder[slug],
+  name: nameToSlugMapForTests[slug],
+  href: `${FORM_PAGE_PREFIX}${slug}`,
+}));
 
 export const notAvailableSlideLinks = [
   "/slides/ecosystem-intro",

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { notReadyTestLinks, TESTS_LINKS } from "@/constants/links";
+import { quiz_links } from "@/constants/links";
 import { H1 } from "../components/H1";
 import { Navigation } from "../components/Navigation";
 
@@ -14,14 +14,12 @@ export const metadata: Metadata = {
 };
 
 export default function form() {
-  const filtered = TESTS_LINKS.filter(
-    (link) => !notReadyTestLinks.includes(link.href),
-  );
+  quiz_links.sort((q1, q2) => q1.order - q2.order);
 
   return (
     <>
-      <H1>Tests</H1>
-      <Navigation links={filtered} />
+      <H1>Quizes</H1>
+      <Navigation listType="ol" links={quiz_links} />
     </>
   );
 }

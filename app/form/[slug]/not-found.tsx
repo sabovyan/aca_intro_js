@@ -2,7 +2,7 @@
 
 import { H1 } from "@/app/components/H1";
 import { Navigation } from "@/app/components/Navigation";
-import { notReadyTestLinks, TESTS_LINKS } from "@/constants/links";
+import { quiz_links } from "@/constants/links";
 import { SLUGS } from "@/constants/slugs";
 import { useParams } from "next/navigation";
 
@@ -16,14 +16,10 @@ export default function NotFoundTest() {
     ? `Comming soon: Current Test will be ready soon`
     : "404 not Found";
 
-  const filteredLinks = TESTS_LINKS.filter(
-    (link) => !notReadyTestLinks.includes(link.href),
-  );
-
   return (
     <main>
       <H1>{message}</H1>
-      <Navigation links={filteredLinks} heading="Other tests" />
+      <Navigation links={quiz_links} heading="Other tests" />
     </main>
   );
 }
