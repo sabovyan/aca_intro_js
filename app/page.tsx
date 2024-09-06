@@ -119,6 +119,18 @@ const topics: Topic[] = [
     },
     linkToQuiz: "/form/uiux-intro",
   },
+  {
+    title: "ML",
+    order: 11,
+    key: "ml",
+    status: "draft",
+    linkToSlide: {
+      type: "internal",
+
+      url: "/slides/ml-intro",
+    },
+    linkToQuiz: "/form/ml-intro",
+  },
 ];
 
 import type { Metadata } from "next";

@@ -9,4 +9,5 @@ export const SLUGS = {
   Ecosystem: "ecosystem-intro",
   ProgrammingLanguages: "programming-languages-intro",
   Frontend: "frontend-intro",
+  Ml: "ml-intro",
 } as const;

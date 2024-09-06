@@ -17,6 +17,7 @@ const nameToSlugMapForSlides: { [k in SlugValus]: string } = {
   "ecosystem-intro": "Intro To The Ecosystem",
   "programming-languages-intro": "intro to Programming Languages",
   "frontend-intro": "Basics of frontend development",
+  "ml-intro": "Intro to ML",
 };
 
 const nameToSlugMapForTests: { [k in SlugValus]: string } = {
@@ -30,6 +31,7 @@ const nameToSlugMapForTests: { [k in SlugValus]: string } = {
   "ecosystem-intro": "Ecosystem",
   "programming-languages-intro": "Programming Languages",
   "frontend-intro": "Basics of frontend development",
+  "ml-intro": "intro to ML",
 };
 
 const SlugOrder: { [k in SlugValus]: number } = {
@@ -43,6 +45,7 @@ const SlugOrder: { [k in SlugValus]: number } = {
   "devops-intro": 8,
   "qa-intro": 9,
   "uiux-intro": 10,
+  "ml-intro": 11,
 };
 
 export const SLIDES_LINKS: TLink<"slides">[] = Object.values(SLUGS).map(

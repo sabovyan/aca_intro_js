@@ -13,6 +13,7 @@ import { QA_INTRO } from "@/constants/qa-intro";
 import { SLUGS } from "@/constants/slugs";
 
 import "./page.css";
+import { ml_slides } from "@/constants/ml-intro";
 
 type SlugValues = (typeof SLUGS)[keyof typeof SLUGS];
 
@@ -24,6 +25,7 @@ const SLIDES: { [k in SlugValues]?: Slide[] } = {
   [SLUGS.DbIntro]: DB_SLIDES,
   [SLUGS.DevopsIntro]: DEVOPS_INTRO,
   [SLUGS.QaIntro]: QA_INTRO,
+  [SLUGS.Ml]: ml_slides,
 };
 
 export const metadata: Metadata = {
