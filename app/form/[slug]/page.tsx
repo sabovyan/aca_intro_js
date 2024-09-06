@@ -17,6 +17,7 @@ import { uiux_quiz } from "./constants/ui_ux_quiz";
 import { TestItem } from "@/types/questions";
 import "./page.css";
 import { db_quiz } from "./constants/db_quiz";
+import { ml_quiz } from "./constants/ml_quiz";
 
 type SlugValue = (typeof SLUGS)[keyof typeof SLUGS] | "random";
 
@@ -37,6 +38,7 @@ const TESTS: { [key in SlugValue]?: TestItem[] } = {
   [SLUGS.DevopsIntro]: devops_quiz,
   [SLUGS.QaIntro]: qa_quiz,
   [SLUGS.UIUXIntro]: uiux_quiz,
+  [SLUGS.Ml]: ml_quiz,
 };
 
 const generateRandomQuestions = () => {
