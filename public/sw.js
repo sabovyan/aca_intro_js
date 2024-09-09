@@ -1,10 +1,11 @@
 "use strict";
 
-const CACHE_NAME = `my-cache-v1.0.7`;
+const CACHE_NAME = `my-cache-v1.0.8`;
 
 install();
 removeOutdatedCache();
 fetchAndCache();
+listenSkipWaitingMessaage();
 
 function install() {
   const urlsToCache = ["/", "/offline"];
@@ -86,5 +87,18 @@ function fetchAndCache() {
 
   self.addEventListener("fetch", (event) => {
     event.respondWith(cacheResponse(event).then());
+  });
+}
+
+function listenSkipWaitingMessaage() {
+  self.addEventListener("message", (event) => {
+    if (event.data.action === "skipWaiting") {
+      self.skipWaiting(); // Activate the new SW only when the user agrees to refresh
+
+      event.source.postMessage({
+        action: "skipWaiting",
+        payload: { status: "done" },
+      });
+    }
   });
 }
