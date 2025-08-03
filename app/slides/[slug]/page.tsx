@@ -37,7 +37,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page(props: { params: Promise<{ slug: string }> }) {
+export async function generateStaticParams() {
+  return Object.values(SLUGS).map((slug) => ({
+    slug,
+  }));
+}
+
+export default async function Page(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
   const currentSlide = SLIDES[params.slug as SlugValues];
 

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import { quiz_links } from "@/constants/links";
+import { SLUGS } from "@/constants/slugs";
 import { H1 } from "../components/H1";
 import { Navigation } from "../components/Navigation";
 
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
     title: "HTI Regional Program (Sisian)",
   },
 };
+
+export async function generateStaticParams() {
+  return Object.values(SLUGS).map((slug) => ({
+    slug,
+  }));
+}
 
 export default function form() {
   quiz_links.sort((q1, q2) => q1.order - q2.order);
