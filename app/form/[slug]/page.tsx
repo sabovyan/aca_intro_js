@@ -22,9 +22,9 @@ import { ml_quiz } from "./constants/ml_quiz";
 type SlugValue = (typeof SLUGS)[keyof typeof SLUGS] | "random";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: SlugValue;
-  };
+  }>;
 }
 
 const TESTS: { [key in SlugValue]?: TestItem[] } = {
@@ -66,7 +66,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Test({ params: { slug } }: Props) {
+export default async function Test(props: Props) {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   let questions = TESTS[slug as SlugValue];
 
   if (slug === "random") {
